@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-Fast, reliable, and comprehensive backup solution for CTFd platforms with multi-threaded downloads and intelligent logging.
+Fast, reliable, and comprehensive backup solution for CTFd platforms with multi-threaded downloads.
 
 [Installation](#quickstart) • [Documentation](docs/USAGE.md) • [Contributing](#contributing)
 
@@ -21,26 +21,22 @@ Fast, reliable, and comprehensive backup solution for CTFd platforms with multi-
 ### Installation
 
 ```bash
-# From PyPI (recommended)
-pip install ctfd-scraper
-
-# From source
 git clone https://github.com/yourusername/ctfd-scraper.git
 cd ctfd-scraper
-pip install -e .
+uv sync
 ```
 
 ### Basic Usage
 
 ```bash
 # Backup everything
-ctfdscraper -u https://ctf.example.com -s your-session-cookie
+uv run ctfdscraper.py -u https://ctf.example.com -s your-session-cookie
 
 # Challenges only
-ctfdscraper -u https://ctf.example.com -s cookie --only-chal
+uv run ctfdscraper.py -u https://ctf.example.com -s cookie --only-chal
 
 # Custom output directory
-ctfdscraper -u https://ctf.example.com -s cookie -o ./backups
+uv run ctfdscraper.py -u https://ctf.example.com -s cookie -o ./backups
 ```
 
 ### Getting Your Session Cookie
@@ -139,42 +135,6 @@ ctfd-scraper/
 └── docs/                 # User guides and API documentation
 ```
 
-### Key Features
-
-**🚀 High Performance**
-- ThreadPoolExecutor-based parallelism
-- Connection pooling with session reuse
-- Streaming downloads for large files
-- Configurable concurrency levels
-
-**📊 Comprehensive Backup**
-- Challenges with descriptions and files
-- Teams with members and solve records
-- Users with team affiliation
-- Complete scoreboard rankings
-- Auto-detects CTF name from HTML title
-
-**🎨 Intelligent Logging**
-- Color-coded output (`[+]` success, `[-]` error, `[!]` warning, `[*]` info)
-- Tagged by module (`[chal]`, `[team]`, `[api]`, etc.)
-- Progress tracking for large operations
-
-**⚙️ Flexible Configuration**
-- CLI-first design (no config files needed)
-- Selective backup with exclusion flags
-- Performance tuning via command-line args
-- Timeout controls for unstable networks
-
-### Performance
-
-Benchmark: 40 challenges, 120 files, 100Mbps network
-
-| Mode | Concurrency | Time | Notes |
-|------|-------------|------|-------|
-| Sequential | 1 worker | ~8 min | Single-threaded |
-| Default | 10×5 workers | ~2 min | Recommended |
-| High-speed | 20×10 workers | ~1 min | Fast networks |
-
 ### Technology Stack
 
 - **Python 3.9+**: Modern async-ready codebase
@@ -188,16 +148,6 @@ Benchmark: 40 challenges, 120 files, 100Mbps network
 ## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2024 CTFd Scraper Contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction...
-```
 
 ---
 
@@ -283,7 +233,13 @@ python -m build
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/ctfd-scraper&type=Date)](https://star-history.com/#yourusername/ctfd-scraper&Date)
+<a href="https://www.star-history.com/#yourusername/ctfd-scraper&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=yourusername/ctfd-scraper&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=yourusername/ctfd-scraper&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=yourusername/ctfd-scraper&type=date&legend=top-left" />
+ </picture>
+</a>
 
 ---
 

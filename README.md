@@ -21,7 +21,7 @@ Fast, reliable, and comprehensive backup solution for CTFd platforms with multi-
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/ctfd-scraper.git
+git clone https://github.com/yuto0226/ctfd-scraper.git
 cd ctfd-scraper
 uv sync
 ```
@@ -224,7 +224,7 @@ python -m build
 
 ### Reporting Issues
 
-- Use the [issue tracker](https://github.com/yourusername/ctfd-scraper/issues)
+- Use the [issue tracker](https://github.com/yuto0226/ctfd-scraper/issues)
 - Include Python version, OS, and CTFd version
 - Provide minimal reproduction steps
 - Check for existing issues first
@@ -233,11 +233,11 @@ python -m build
 
 ## Star History
 
-<a href="https://www.star-history.com/#yourusername/ctfd-scraper&type=date&legend=top-left">
+<a href="https://www.star-history.com/#yuto0226/ctfd-scraper&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=yourusername/ctfd-scraper&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=yourusername/ctfd-scraper&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=yourusername/ctfd-scraper&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=yuto0226/ctfd-scraper&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=yuto0226/ctfd-scraper&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=yuto0226/ctfd-scraper&type=date&legend=top-left" />
  </picture>
 </a>
 
